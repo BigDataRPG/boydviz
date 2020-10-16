@@ -9,7 +9,7 @@ pd.set_option('display.width', 10000)
 
 BASE_DIR = os.path.dirname(os.path.abspath("zen_twitter.csv"))
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, '/data/'),
+    os.path.join(BASE_DIR, '/data/')
 )
 
 st.title("Zen Group - DashBoard")
