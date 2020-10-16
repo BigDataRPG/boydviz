@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud
 import os
 
 pd.set_option('display.width', 10000)
