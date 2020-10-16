@@ -15,8 +15,8 @@ st.write("ZEN journey has been driven by cooking spirit and unique tasting selec
 ## LOAD DATA
 @st.cache(persist=True)
 def load_data():
-	df_zen = pd.read_csv("C://Users/Boyd/Projects/AI/data/zen_twitter.csv")
-	df_set_food = pd.read_csv("C://Users/Boyd/Projects/AI/data/food_set.csv")
+	df_zen = pd.read_csv("./data/zen_twitter.csv")
+	df_set_food = pd.read_csv("./data/food_set.csv")
 	
 	return df_zen, df_set_food
 
