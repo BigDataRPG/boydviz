@@ -4,9 +4,14 @@ import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
+import os
 
 pd.set_option('display.width', 10000)
 
+BASE_DIR = os.path.dirname(os.path.abspath("zen_twitter.csv"))
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'data/'),
+)
 
 st.title("Zen Group - DashBoard")
 st.write("ZEN journey has been driven by cooking spirit and unique tasting selection to fulfill \
@@ -15,8 +20,8 @@ st.write("ZEN journey has been driven by cooking spirit and unique tasting selec
 ## LOAD DATA
 @st.cache(persist=True)
 def load_data():
-	df_zen = pd.read_csv("./data/zen_twitter.csv")
-	df_set_food = pd.read_csv("./data/food_set.csv")
+	df_zen = pd.read_csv(STATICFILES_DIRS + "zen_twitter.csv")
+	df_set_food = pd.read_csv(STATICFILES_DIRS + "food_set.csv")
 	
 	return df_zen, df_set_food
 
